@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'one_design.css' %}"> 
+</head>
+<body>
+    
+    <h1>Stage3</h1>
+    
+    <div class="fireflies-con">
+    <div class="fireflie-0" style="animation: s2mov0 8s infinite,glow 1s infinite ;"></div>
+    <div class="fireflie-0" style="animation: s2mov1 12s infinite,glow 1s infinite ;"></div>
+    <div class="fireflie-0" style="height:8rem; width:8rem; position: absolute; top: 50rem; left: 35rem;"></div>
+    <div class="fireflie-0" style="height: 3rem; width: 3rem; position: absolute; top: 10rem; left: 20rem;"></div>
+    <div class="fireflie-0" style="height: 6rem; width: 6rem; position: absolute; top: 2rem; left: 40rem;"></div>
+   
+    <div class="fireflie-1" style="height: 4rem; width: 4rem; animation: s2mov2 4s infinite,glow1 1s infinite ; "></div>
+    <div class="fireflie-1" style="height: 6rem; width: 6rem; position: absolute; top: 35rem; left: 40rem; animation: glow2 1s infinite; "></div>
+    <div class="fireflie-1" style="height: 7rem; width: 7rem; animation: s2mov3 15s infinite,glow1 1s infinite ;"></div>
+   </div>
+    {% for questio in question %}
+       <div class="container">
+        <div class="question"><p>{{ questio.question }}</p></div>
+        <div class="sec-part"><div class="first-set">
+            <a href="{% url 'stage3correcter' questio.option_1  questio.answer %}"><div class="option"><p>{{ questio.option_1 }}</p></div></a>
+            <a href="{% url 'stage3correcter' questio.option_2  questio.answer %}"><div class="option"><p>{{ questio.option_2 }}</p></div></a></div>
+        <div class="sec-set">
+            <a href="{% url 'stage3correcter' questio.option_3  questio.answer %}"><div class="option">{{ questio.option_3 }}</div></a>
+            <a href="{% url 'stage3correcter' questio.option_4  questio.answer %}"><div class="option">{{ questio.option_4 }}</div></a>
+        </div>
+        </div>
+        <div class="score">{{score}}</div>
+    </div>
+    {% endfor %}
+</body>
+</html>

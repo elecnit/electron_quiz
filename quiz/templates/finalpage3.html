@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static  %}
+    <link rel="stylesheet" href="{% static 'design.css'  %}">
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <div class="ball1" style="background:yellow;"></div>
+    <div  class="ball2" style="background: green;"></div>
+    <div class="ball3" style="background:red;"></div>
+    <div class="ball4" style="background: purple;"></div>
+    <div class="ball5" style="background: pink;"></div>
+    <div class="ball6" style="background: violet;"></div>
+    <div class="ball7" style="background: lightgreen;"></div>
+
+    
+    <h3><a href="{% url 'home' %}" style="font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 2rem;">Play Agian</a></h3>
+    <div class="certificate" style="background:white;"><h1 style="color:black;">certificate</h1><br>
+    <p class="cer_text" style="color:black;"> {{user.username}} you have completed  all 
+        stages successesfully  with {{score}} score.  Silver is waiting for you.</p></div>
+        
+
+<!--This is for rigthside blow----------------------------------------->
+<div  class="ball1_2" style="background: red;"></div>
+<div class="ball2_2" style="background: orange;"></div>
+<div class="ball3_2" style="background: green;"></div>
+<div class="ball4_2" style="background: orangered;"></div>
+<div class="ball5_2" style="background: yellow;"></div>
+<div class="ball6_2" style="background: violet;"> </div>
+<div class="ball7_2" style="background: blue;"></div>
+<div class="ball8_2" style="background: slateblue;"></div>       
+{% else %}
+<h1>You are not allowed here </h1> 
+{% endif %}
+</body>
+</html>

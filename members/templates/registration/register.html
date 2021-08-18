@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'design.css'  %}">
+</head>
+<body>
+    {% block content %}
+   
+    <div class="header"><div class="head-con"><a href="{% url 'home' %}">Home</a></div></div>
+  <div class="container">
+  
+  <form action="" method="POST">
+    {% csrf_token %}
+    <h2>Resgister</h2>
+    <p>{{form.username}}</p>
+    <p> {{form.email}}</p>
+    <p>{{form.first_name}}</p>
+    <p>{{form.last_name}}</p> 
+    <p>{{form.password1}}</p>
+    <p>{{form.password2}}</p>
+    <button>Register</button>
+</form>
+</div>
+
+    {% endblock content %}
+</body>
+</html>

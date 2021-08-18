@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'design.css'  %}">
+  <!--<div class="body">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'myeleblog/css/design.css' %}">
+  <h2>Home</h2>
+  <p>hi {{user.username}}</p>
+  <p><a href="{% url 'stage1' %}">Play</a></p>
+  <h2><a href="{% url 'login' %}">Login</a></h2>
+  <h2><a href="{% url 'register' %}">Resgister</a></h2>
+</div>-->
+    
+   
+</head>
+<body>
+ 
+<!--<style>
+
+  html{
+    font-size: 62.5%;
+  }
+ body{
+   margin: 0;
+   padding: 0;
+   background:linear-gradient(to right,rgb(30, 30, 184) ,purple 80%);
+ }
+     
+  .header{
+    margin-top: .2rem;
+    height: 3rem;
+    
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .head-con{
+    margin: 2rem;
+  }
+  .head-con a{
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .electron{
+    opacity: 0;
+     font-size:2rem ;
+      margin: auto;
+      margin-top: 26rem;
+      color:black;
+      text-align: center;
+     
+      animation:color 1s 2.2s  forwards ;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .box{
+      position: absolute;
+      top:30rem;
+      left: 50rem;
+      height: .2rem;
+      width: 40.0rem;
+      transform: translate(-50%);
+      background-color: red;
+      margin: auto;
+      animation:scale 1s infinite, rotate 1s 1s forwards,move1 .5s 2s forwards;
+      /*animation: box_mov 2s infinite;*/
+ }
+ .tex{
+   animation: text 1s 2s forwards;
+   opacity: 0;
+   text-shadow: none;
+ }
+ .tex1{
+   animation: text1 2s 2.7s infinite;
+   font-size: 3rem;
+   text-shadow: none;
+   opacity: 0;
+   color: black;
+ }
+ .play{
+   height: 5rem;
+   width: 8rem;
+   margin: auto;
+   margin-top: 5rem;
+   border-radius: 1rem;
+   font-size:1.2rem;
+   color: rgb(52, 190, 190);
+   text-align: center;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   box-shadow: 0 0 .5rem red;
+   border:3px solid  red ;
+   animation: text2 2s infinite;
+ }
+ @keyframes scale {
+ 
+ from{transform: scale(0);}
+ to{transform: scale(1);}
+ }  
+
+ @keyframes rotate {
+ 
+   from{transform: rotateZ(0deg);}
+   to{transform: rotateZ(-180deg) ;}
+ }  
+ @keyframes move1 {
+  to{top:35rem;}
+ }  
+ 
+ @keyframes color{
+   to{color: red; text-shadow: 0 0 .5rem red; opacity: 1;}
+ }
+ @keyframes text{
+   to{color: white; opacity: 1;}
+ 
+ }
+ @keyframes text1{
+  0%{color: rgb(52, 190, 190);opacity: 1 }
+  50%{color: rgb(52, 190, 190); text-shadow:0 0 .5rem rgb(52, 190, 190); opacity: 1}
+  100%{color: rgb(52, 190, 190); opacity: 1}
+ }
+ @keyframes text2{
+  0%{color: red; }
+  50%{color: red; text-shadow:0 0 .5rem red }
+  100%{color: red;}
+ }
+</style>-->
+
+
+<div class="header">{% if not user.is_authenticated %}<div class="head-con"><a href="{% url 'register' %}">Resgister</a></div> <div class="head-con"><a href="{% url 'login' %}">Login</a></div>
+{% else %}
+<div class="head-con"><a href="{% url 'logout' %}">Logout</a></div>{% endif %}</div>
+
+
+
+  {% if  user.is_authenticated %}
+  <div class="play"><h1><a href="{% url 'stage1' %}"> Play</a></h1></div>
+  {% else %}
+  <div class="box" > </div>
+ <div class="electron"><h1>Electron</h1><p class="tex">presents</p>
+  <div class="tex1" > <h1 >E_Quiz</h1></div></div>
+  {% endif %}
+
+</body>
+</html>

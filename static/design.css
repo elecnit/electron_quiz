@@ -1,0 +1,489 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+  }
+  
+ body{
+   margin: 0;
+   padding: 0;
+   background:linear-gradient(to right,rgb(30, 30, 184) ,purple 80%);
+   text-align: center;
+  }
+     
+  .header{
+    margin-top: .2rem;
+    height: 3rem;
+    
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .head-con{
+    margin: 2rem;
+  }
+  .head-con a{
+    color: white;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .electron{
+    opacity: 0;
+     font-size:2rem ;
+      margin: auto;
+      margin-top: 26rem;
+      color:black;
+      text-align: center;
+     
+      animation:color 1s 2.2s  forwards;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .box{
+      position: absolute;
+      top:30rem;
+      left: 50rem;
+      height: .2rem;
+      width: 40.0rem;
+      transform: translate(-50%);
+      background-color: red;
+      margin: auto;
+      animation:scale 1s infinite, rotate 1s 1s forwards,box_move .5s 2s forwards ;
+      /*animation: box_mov 2s infinite;*/
+ }
+ .tex{
+   animation: text 1s 2s forwards;
+   opacity: 0;
+   text-shadow: none;
+ }
+ .tex1{
+   animation: text1 2s 2.7s infinite;
+   font-size: 3rem;
+   text-shadow: none;
+   opacity: 0;
+   color: black;
+ }
+ .play{
+   height: 5rem;
+   width: 8rem;
+   margin: auto;
+   margin-top: 5rem;
+   border-radius: 1rem;
+   font-size:1.2rem;
+   color: rgb(52, 190, 190);
+   text-align: center;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   box-shadow: 0 0 .5rem red;
+   border:.3rem solid  red ;
+   animation: text2 2s infinite;
+ }
+ h1 a{
+   color: red;
+ }
+ @keyframes scale {
+ 
+ from{transform: scale(0);}
+ to{transform: scale(1);}
+ }  
+
+ @keyframes rotate {
+ 
+   from{transform: rotateZ(0deg);}
+   to{transform: rotateZ(-180deg) ;}
+ }  
+ @keyframes box_move {
+ to{top:35rem}
+ }  
+ 
+ @keyframes color{
+   to{color: red; text-shadow: 0 0 .5rem red; opacity: 1;}
+ }
+ @keyframes text{
+   to{color: white; opacity: 1;}
+ 
+ }
+ @keyframes text1{
+  0%{color: rgb(52, 190, 190);opacity: 1 }
+  50%{color: rgb(52, 190, 190); text-shadow:0 0 .5rem rgb(52, 190, 190); opacity: 1}
+  100%{color: rgb(52, 190, 190); opacity: 1}
+ }
+ @keyframes text2{
+  0%{color: red; }
+  50%{color: red; text-shadow:0 0 .5rem red }
+  100%{color: red;}
+ }
+
+ /******ENTER FORM**********************************************/
+ .container{
+  vertical-align: middle;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  height: 40.0rem;
+  width: 35.0rem;
+  background:white;
+  border: .4rem solid rgb(90, 87, 87);
+ border-radius: 35px;
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: 6.0rem;
+ color: gray;
+ opacity: .2;
+ cursor: pointer;
+
+
+}
+
+.form-control{
+  height: 2rem;
+  font-size:1.5rem ;
+}
+a{
+  color: white;
+  text-decoration: none;
+}
+/*****STAGE 1********************************************************************/
+.container1{
+  margin: auto;
+  margin-top: 30rem;
+  height:25rem;
+  width: 56rem; 
+  border: 4px solid rgb(187, 182, 182);
+  border-radius: 6rem;
+  color: aliceblue;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.2;
+}
+.score{
+  height: 2rem;
+  width: 3rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  border: 4px solid rgb(187, 182, 182);
+}
+.question{
+ 
+  height: 9rem;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: blod;
+  font-size:1.8rem;
+}
+.sec-part{
+ 
+  height: 14rem;
+
+}
+.first-set{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+.sec-set{
+
+  display: flex;
+  justify-content: center;
+}
+.option{
+  text-align: center;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.4rem;
+  height: 4rem;
+  width: 16rem;
+  border-radius: 6rem;
+  border: 4px solid rgb(187, 182, 182);
+  margin-top: 2rem;
+}
+/*******FINAL STAGE***************************************************/
+.ball1{
+  height: 0rem;
+  width: 1.0rem;
+  background: rgb(209, 189, 77);
+  animation: move1 1s 3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8) 
+   
+}
+
+.ball2{
+      height: 0rem;
+      width: .8rem;
+      background:rgb(209, 189, 77);
+      animation: move2 1s 3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+      }
+ 
+.ball3{
+          height: 0rem;
+          width: 1.8rem;
+          background: rgb(209, 189, 77);
+          animation: move3 1s  3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+          
+      }
+.ball6{
+          height: 0rem;
+          width: .8rem;
+          background: rgb(209, 189, 77);
+          animation: move6 1s  3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+          }
+     
+.ball7{
+              height: 0rem;
+              width: .8rem;
+              background: rgb(209, 189, 77);
+              animation: move7 1s  3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+              }
+         
+          
+.ball4{
+              height: 0rem;
+              width: 1.5rem;
+              background: rgb(209, 189, 77);
+              animation: move4 1s  3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+              }
+         
+.ball5{
+                  height: 0rem;
+                  width: 1.5rem;
+                  background: rgb(209, 189, 77);
+                  animation: move5 1s  3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+                  }               
+
+/***This is for right blow****************************************************************************************/
+.ball1_2{
+  height: 0rem;
+  width: 1.0rem;
+  background: rgb(209, 189, 77);
+  animation: mover1 1s  3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+  }
+
+.ball2_2{
+      height: 0rem;
+      width: .8rem;
+      background:rgb(209, 189, 77);
+      animation: mover2 1s  3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+      }
+ 
+.ball3_2{
+          height: 0rem;
+          width: 1.8rem;
+          background: rgb(209, 189, 77);
+          animation: mover3 1s 3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+      }
+.ball4_2{
+          height: 0rem;
+          width: .8rem;
+          background: rgb(209, 189, 77);
+          animation: mover4 1s 3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+          }
+     
+.ball5_2{
+              height: 0rem;
+              width: .8rem;
+              background: rgb(209, 189, 77);
+              animation: mover5 1s 3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+              }
+         
+          
+.ball6_2{
+              height: 0rem;
+              width: .9rem;
+              background: rgb(209, 189, 77);
+              animation: mover6 1s 3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+              }
+         
+.ball7_2{
+                  height: 0rem;
+                  width: 1.5rem;
+                  background: rgb(209, 189, 77);
+                  animation: mover7 1s 3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+                  }   
+.ball8_2{
+                      height: 0rem;
+                      width: 1.5rem;
+                      background: rgb(209, 189, 77);
+                      animation: mover8 1s 3s infinite cubic-bezier(0.1, 0.8 , 0.8, 0.8)
+                      }                       
+                  
+/***This is for certificate**********************************************************************************/
+.certificate{
+  height: 45.0rem;
+  width: 42.2rem;
+  font-size: 2.5rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
+  text-align:center;
+  color: rgb(209, 189, 77);
+  text-shadow: 0 0 1.0rem black;
+  border-radius: 1.0rem;
+  margin-top: 14.rem;
+  box-shadow:  0  0  4.0rem black ;
+  top:10.5rem;
+  background:rgb(209, 189, 77);
+  margin-left: auto;
+  margin-right: auto;
+  animation: forward_move 3s 1;
+}   
+.cer_text {
+  color: rgb(209, 189, 77);
+  font-size: 2.0rem;
+  line-height: 5.5rem;
+  font-style: italic;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-shadow: 0 0 1.0rem rgb(0, 0, 0);
+}       
+
+@keyframes move1 {
+  0%{position: absolute; top: 15.0rem; left: 45.0rem;  transform:  rotateX(0deg); height: 1.0rem; }
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; left: 45.0rem;   transform: rotateX(360deg) scale(2); height: 1.0rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 30.0rem; left: 22.0rem;   transform:  rotateX(0deg) scale(3); height: 1.0rem; }
+}    
+
+@keyframes move2 {
+  0%{position: absolute; top: 15.0rem; left: 45.0rem;  transform:  rotateX(0deg); height: .8rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; left: 45.0rem;   transform: rotateX(360deg) scale(2); height: .8rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 10.0rem; left: 25.0rem;   transform:  rotateX(0deg) scale(3);height: .8rem; }
+}    
+
+
+
+
+@keyframes move3 {
+  0%{position: absolute; top: 15.0rem; left: 45.0rem;  transform:  rotateX(0deg);   height: 1.8rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; left: 45.0rem;   transform: rotateX(360deg) scale(2);   height: 1.8rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 2.0rem; left: 2.0rem;   transform:  rotateX(0deg) scale(3);   height: 1.8rem;}
+}    
+
+@keyframes move4 {
+  0%{position: absolute; top: 15.0rem; left: 45.0rem;  transform:  rotateY(0deg);  height: 1.2rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; left: 45.0rem;   transform: rotateY(360deg) scale(2); height: 1.2rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 15.0rem; left: 10.0rem;   transform:  rotateY(0deg) scale(3);  height: 1.2rem;}
+}  
+
+@keyframes move5 {
+  0%{position: absolute; top: 15.0rem; left: 45.0rem;  transform:  rotateZ(0deg);  height: 1.2rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; left: 45.0rem;   transform: rotateZ(360deg) scale(2); height: 1.2rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 2.0rem; left: 15.0rem;   transform:  rotateZ(0deg) scale(3);  height: 1.2rem;}
+}  
+
+@keyframes move6 {
+  0%{position: absolute; top: 15.0rem; left: 45.0rem;  transform:  rotateZ(0deg);  height: .8rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; left: 45.0rem;   transform: rotateZ(360deg) scale(2);  height: .8rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 5.0rem; left: 35.0rem;   transform:  rotateZ(0deg) scale(3); height: .8rem; }
+}  
+
+@keyframes move7 {
+  0%{position: absolute; top: 15.0rem; left: 45.0rem;  transform:  rotateZ(0deg);  height: .8rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; left: 45.0rem;   transform: rotateZ(360deg) scale(2);  height: .8rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 18.0rem; left: 30.0rem;   transform:  rotateZ(0deg) scale(3);  height: .8rem; }
+}  
+
+
+/****this is animation stuff of right blow********************************************************************/
+
+@keyframes mover1 {
+  0%{position: absolute; top: 15.0rem; right: 45.0rem;  transform:  rotateX(0deg); height: 1.0rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; right: 45.0rem;   transform: rotateX(360deg) scale(2);  height: 1.0rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 30.0rem; right: 22.0rem;   transform:  rotateX(0deg) scale(3);  height: 1.0rem;}
+}    
+
+@keyframes mover2 {
+  0%{position: absolute; top: 15.0rem; right: 45.0rem;  transform:  rotateX(0deg);  height: .8rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; right: 45.0rem;   transform: rotateX(360deg) scale(2);  height: .8rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 10.0rem; right: 25.0rem;   transform:  rotateX(0deg) scale(3);  height: .8rem; }
+}    
+
+
+
+
+@keyframes mover3 {
+  0%{position: absolute; top: 15.0rem; right: 45.0rem;  transform:  rotateX(0deg);    height: 1.8rem; }
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; right: 45.0rem;   transform: rotateX(360deg) scale(2);    height: 1.8rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 2.0rem; right: 2.0rem;   transform:  rotateX(0deg) scale(3);    height: 1.8rem; }
+}    
+
+@keyframes mover4 {
+  0%{position: absolute; top: 15.0rem; right: 45.0rem;  transform:  rotateY(0deg);   height: .8rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; right: 45.0rem;   transform: rotateY(360deg) scale(2);  height: .8rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 15.0rem; right: 10.0rem;   transform:  rotateY(0deg) scale(3);  height: .8rem;}
+}  
+
+@keyframes mover5 {
+  0%{position: absolute; top: 15.0rem; right: 45.0rem;  transform:  rotateZ(0deg);  height: .8rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; right: 45.0rem;   transform: rotateZ(360deg) scale(2);  height: .8rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 2.0rem; right: 15.0rem;   transform:  rotateZ(0deg) scale(3);  height: .8rem; }
+}  
+
+@keyframes mover6 {
+  0%{position: absolute; top: 15.0rem; right: 45.0rem;  transform:  rotateZ(0deg);  height: .9rem; }
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; right: 45.0rem;   transform: rotateZ(360deg) scale(2);  height: .9rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 5.0rem; right: 35.0rem;   transform:  rotateZ(0deg) scale(3);  height: .9rem;}
+}  
+
+@keyframes mover7 {
+  0%{position: absolute; top: 15.0rem; right: 45.0rem;  transform:  rotateZ(0deg); height: 1.2rem; }
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; right: 45.0rem;   transform: rotateZ(360deg) scale(2); height: 1.2rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 18.0rem; right: 30.0rem;   transform:  rotateZ(0deg) scale(3);  height: 1.2rem;}
+}  
+
+@keyframes mover8 {
+  0%{position: absolute; top: 15.0rem; right: 45.0rem;  transform:  rotateZ(0deg);  height: 1.5rem;}
+  /*25%{position: absolute; top: 100rem; left: 250rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg);}*/ 
+  50%{position: absolute; top: 15.0rem; right: 45.0rem;   transform: rotateZ(360deg) scale(2); height: 1.5rem;}
+ /* 75%{position: absolute; top: 50rem; left: 150rem; background: rgb(209, 189, 77);  transform:  rotateZ(180deg); }*/
+  100%{position: absolute; top: 2.0rem; right: 20.0rem;   transform:  rotateZ(0deg) scale(3);  height: 1.5rem;}
+}  
+
+/****for certificate forward move*****************************************************/
+@keyframes forward_move {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+  
+}
+/*****FOR OTHERS********************************************************************/
+
+@media (max-width:768px) {
+  html{
+    font-size: 45%;
+  }
+  .box{
+    left: 30rem;
+  }
+}
+@media (max-width:480px) {
+  html{
+    font-size: 30%;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'design.css'  %}">
+    
+</head>
+<body>
+   <h1> Stage 2</h1>
+   {% if user.is_authenticated %}
+   {% for questio in question %}
+   <div class="container1">
+        <div class="question"><p>{{ questio.question }}</p></div>
+        <div class="sec-part">
+        <div class="first-set">
+            <a href="{% url 'stage2correcter' questio.option_1  questio.answer %}"><div class="option"><p>{{ questio.option_1 }}</p></div></a>
+            <a href="{% url 'stage2correcter' questio.option_2  questio.answer %}"><div class="option"><p>{{ questio.option_2 }}</p></div></a>
+        </div>
+        <div class="sec-set">
+            {% if questio.option_3 %}
+            <a href="{% url 'stage2correcter' questio.option_3  questio.answer %}"><div class="option">{{ questio.option_3 }}</div></a>
+            {% endif %}
+            {% if questio.option_4 %}
+            <a href="{% url 'stage2correcter' questio.option_4  questio.answer %}"><div class="option">{{ questio.option_4 }}</div></a>
+            {% endif %}
+        </div>
+       </div>
+       <div class="score">{{score}}</div>
+   </div>
+   {% endfor %}
+   {% else %}
+   <h1>You are not allowed here</h1>
+   {% endif %}
+</body>
+</html>
